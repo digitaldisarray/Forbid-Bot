@@ -1,12 +1,14 @@
 import discord # Make sure you have discord.py installed!
 import asyncio
 
+# Made By: Digital Disarray
+# Purpose of this bot is to prevent people from posting stuff like irl names and personal information.
+
 client = discord.Client()
 
 error = '[ ERROR ] - '
 warn =  '[ WARN ] -'
 info =  '[ INFO ] - '
-
 
 text = []
 phrases = []
