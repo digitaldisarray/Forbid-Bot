@@ -42,15 +42,15 @@ async def on_ready():
 async def on_message(message):
 	for i in range(len(phrases)):
 		if message.content.lower().contains(phrases[i]):
-			Client.delete_message(message)
+			async Client.delete_message(message)
 			if punishments[i] == 'k'
 				# Kick
-				Client.kick(member)
-				print(info + 'Kicked ' + message.author + ' for saying: ' + message.content)
+				async Client.kick(member)
+				print(info + 'Kicked ' + str(message.author) + ' for saying: ' + str(message.content))
 			elif punishments[i] == 'b'
 				# Ban
-				Client.ban(member)
-				print(info + 'Banned ' + message.author + ' for saying: ' + message.content)
+				async Client.ban(member)
+				print(info + 'Banned ' + str(message.author) + ' for saying: ' + str(message.content))
 			#elif punishments[i] == 'm'
 				# TODO: Add time based mute.
 				#mute(message.author)
