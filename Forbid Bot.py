@@ -21,14 +21,12 @@ async def on_ready():
     print('User ID: ' + client.user.id)
     print('=====================')
     f = open('./list.txt')
-    print(info + 'Opened file.')
-    
+    print(info + 'Reading file...')
     raw = f.read()
-    print(info + 'Ran file read.')
-    
     text = raw.split(':')
-    print(info + 'Split the string.')
-    
+    print(info + 'Done.')
+
+    print(info + "Adding phrases...")
     for i in range(len(text)):
 	if (i % 2) == 0:
 		# Even
@@ -36,6 +34,7 @@ async def on_ready():
 	else:
 		# Odd
 		punishments.append(text[i].rstrip())
+    print(info + "Done.")
 
 
 @client.event
